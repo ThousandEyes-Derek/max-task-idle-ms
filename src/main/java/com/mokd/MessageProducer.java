@@ -36,7 +36,7 @@ public class MessageProducer {
             kafkaProducer.send(new ProducerRecord<>(
                     "table",
                     null,
-                    now.toEpochMilli(),
+                    now.toEpochMilli() - 1,
                     key,
                     "table-value"
             ));
